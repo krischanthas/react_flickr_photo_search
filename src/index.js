@@ -4,15 +4,6 @@ import ReactDOM from "react-dom";
 import "./styles.css";
 import { sample } from "lodash";
 
-// Search API
-
-// Image URL
-const sampleImageUrl =
-  "https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}_t.jpg";
-
-// Detail Page URL
-const sampleImagePageUrl = "https://www.flickr.com/photos/{user-id}/{photo-id}";
-
 const App = () => {
   const [userInput, setUserInput] = useState("");
   const [photos, setPhotos] = useState([]);
@@ -25,7 +16,6 @@ const App = () => {
         throw new Error("Network response was not ok");
       }
       let data = await response.json();
-      console.log(data.photos.photo);
       setPhotos(data.photos.photo);
     } catch (err) {
       console.error(`Error: ${err}`);
