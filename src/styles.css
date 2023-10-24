@@ -1,0 +1,39 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #ddd;
+  color: #333;
+  font-family: sans-serif;
+}
+
+.App {
+  margin: 15px;
+  max-width: 600px;
+  text-align: center;
+}
+
+@media (min-width: 630px) {
+  .App {
+    margin: 15px auto;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+  justify-content: center;
+}
+
+.grid-item {
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
